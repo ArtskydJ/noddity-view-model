@@ -52,6 +52,23 @@ var ViewModel = require('noddity-view-model')
 	- `err` is an error, or `null`.
 	- `html` is the compiled html.
 
+# notes on templates
+
+Here is a list of things you can use in your template:
+
+- `{{html}}`
+- `{{current}}`
+- `{{date}}`
+- `{{page}}`
+- `{{postList}}`
+- Properties on the `ractiveData` object:
+
+```js
+ractiveTemplate = '{{html}}\n{{current}}\n{{date}}\n{{page}}\n{{postList}}\n{{thingy}}'
+ractiveData = { thingy: 3 }
+```
+
+
 # install
 
 With [npm](http://nodejs.org/download) do:
