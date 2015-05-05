@@ -1,4 +1,4 @@
-debouncer
+noddity-view-model
 =========
 
 # example
@@ -73,7 +73,7 @@ ractiveData = { thingy: 3 }
 
 With [npm](http://nodejs.org/download) do:
 
-	npm install debouncer
+	npm install noddity-view-model
 
 # license
 
