@@ -31,7 +31,7 @@ setCurrent('whatever-page.md', function (err, html) {
 })
 ```
 
-#api
+# api
 
 ```js
 var ViewModel = require('noddity-view-model')
