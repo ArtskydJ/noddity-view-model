@@ -4,30 +4,28 @@ noddity-view-model
 # example
 
 ```js
-var setCurrent = (function () {
-	var level = require('level-mem')
-	var Sublevel = require('level-sublevel')
-	var Retrieval = require('noddity-fs-retrieval')
-	var Butler = require('noddity-butler')
-	var Renderer = require('noddity-renderer')
-	var ViewModel = require('noddity-view-model')
-	var renderData = require('./renderData.json')
-	var renderTemplate = require('fs').readFileSync('index.html', { encoding:'utf8' })
+var level = require('level-mem')
+var Retrieval = require('noddity-fs-retrieval')
+var Butler = require('noddity-butler')
+var Renderer = require('noddity-renderer')
+var ViewModel = require('noddity-view-model')
 
-	var butlerOpts = {
-		refreshEvery: 600000,
-		cacheCheckIntervalMs: 10000
-	}
+var renderTemplate = require('fs').readFileSync('index.html', { encoding:'utf8' })
 
-	var db = new level('./database')
-	var retrieve = new Retrieval(renderData.noddityRoot)
-	var butler = new Butler(retrieve, db, butlerOpts)
-	var renderer = new Renderer(butler, String)
-	return new ViewModel(butler, renderer, renderTemplate, renderData)
-})()
+var butlerOpts = {
+	refreshEvery: 600000,
+	cacheCheckIntervalMs: 10000
+}
+
+var db = new level('./database')
+var retrieve = new Retrieval('./www/')
+var butler = new Butler(retrieve, db, butlerOpts)
+var renderer = new Renderer(butler, String)
+
+var setCurrent =  new ViewModel(butler, renderer, renderTemplate)
 
 setCurrent('whatever-page.md', function (err, html) {
-	document.getElementById('page').innerHTML = html
+	document.getElementById('page').innerHTML = err ? err.message : html
 })
 ```
 
