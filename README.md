@@ -1,6 +1,8 @@
 noddity-view-model
 =========
 
+[![Dependency Status](https://david-dm.org/ArtskydJ/noddity-view-model.svg)](https://david-dm.org/ArtskydJ/noddity-view-model)
+
 # example
 
 ```js
