@@ -9,5 +9,6 @@
   "dependencies": {
     "ractive": "^0.7.3",
     "string.prototype.endswith": "^0.2.0"
-  }
+  },
+  "devDependencies": {}
 }
