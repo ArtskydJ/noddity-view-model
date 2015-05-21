@@ -2,6 +2,7 @@ noddity-view-model
 =========
 
 [![Dependency Status](https://david-dm.org/ArtskydJ/noddity-view-model.svg)](https://david-dm.org/ArtskydJ/noddity-view-model)
+[![devDependency Status](https://david-dm.org/artskydj/noddity-view-model/dev-status.svg)](https://david-dm.org/artskydj/noddity-view-model#info=devDependencies)
 
 # example
 
