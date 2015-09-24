@@ -1,5 +1,6 @@
 var Ractive = require('ractive')
 require('string.prototype.endswith')
+Ractive.DEBUG = false
 
 function cbIfErr(onErr, noErr) {
 	return function (err) {
